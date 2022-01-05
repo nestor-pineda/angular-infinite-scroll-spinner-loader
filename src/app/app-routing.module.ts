@@ -9,6 +9,14 @@ const routes: Routes = [
         (m) => m.GlobaNewsModule
       ),
   },
+
+  {
+    path: `spanish`,
+    loadChildren: () =>
+      import('./pages/spanish-news/spanish-news.module').then(
+        (m) => m.SpanishNewsModule
+      ),
+  },
 ];
 
 @NgModule({

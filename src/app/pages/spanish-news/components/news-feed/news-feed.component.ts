@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
 import { HttpRequestService } from 'src/app/shared/services/http-request.service';
+import { Component, OnInit } from '@angular/core';
 import { Inews } from 'src/app/pages/models/news.interface';
 
 @Component({
@@ -10,9 +10,8 @@ import { Inews } from 'src/app/pages/models/news.interface';
 export class NewsFeedComponent implements OnInit {
   constructor(private service: HttpRequestService) {}
 
-  public title: string = 'English News';
-
-  // aray de resultados
+  public title: string = 'Spanish News';
+  // array de resultados
   public newsResults: Inews[] = [
     {
       urlToImage: '',
@@ -23,7 +22,7 @@ export class NewsFeedComponent implements OnInit {
   ];
 
   ngOnInit(): void {
-    this.service.getGlobalNews().subscribe((result) => {
+    this.service.getSpanishNews().subscribe((result) => {
       console.log(result);
       this.newsResults = result.articles;
     });
