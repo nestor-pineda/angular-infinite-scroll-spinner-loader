@@ -7,6 +7,7 @@ import { GlobalNewsRoutingModule } from './global-news-routing.module';
 import { NewsFeedComponent } from './components/news-feed/news-feed.component';
 
 import { SharedModule } from 'src/app/shared/shared.module';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 @NgModule({
   declarations: [NewsFeedComponent],
@@ -15,6 +16,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
     GlobalNewsRoutingModule,
     HttpClientModule,
     SharedModule,
+    InfiniteScrollModule,
   ],
   providers: [HttpRequestService],
 })

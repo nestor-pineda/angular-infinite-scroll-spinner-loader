@@ -22,10 +22,18 @@ export class NewsFeedComponent implements OnInit {
     },
   ];
 
+  // throttle = 0;
+  // distance = 2;
+
   ngOnInit(): void {
     this.service.getGlobalNews().subscribe((result) => {
-      console.log(result);
       this.newsResults = result.articles;
+    });
+  }
+
+  onScroll(): void {
+    this.service.getGlobalNews().subscribe((result) => {
+      this.newsResults.push(...result.articles);
     });
   }
 }

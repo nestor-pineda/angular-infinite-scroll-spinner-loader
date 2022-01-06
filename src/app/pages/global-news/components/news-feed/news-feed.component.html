@@ -9,5 +9,11 @@
   </div>
 </div>
  -->
-
-<app-news [newsResults]="newsResults" [title]="title"></app-news>
+<div
+  infinite-scroll
+  [infiniteScrollDistance]="2"
+  [infiniteScrollThrottle]="0"
+  (scrolled)="onScroll()"
+>
+  <app-news [newsResults]="newsResults" [title]="title"></app-news>
+</div>
