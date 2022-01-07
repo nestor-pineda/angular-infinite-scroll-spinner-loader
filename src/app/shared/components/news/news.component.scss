@@ -1,0 +1,16 @@
+.image {
+  width: 100%;
+  height: 180px;
+  background: #fff center center/cover no-repeat;
+  opacity: 0.6;
+  transition: opacity 1s ease 0s;
+}
+
+.image:hover {
+  opacity: 1;
+}
+
+h4,
+.title {
+  font-family: "Playfair Display", serif;
+}

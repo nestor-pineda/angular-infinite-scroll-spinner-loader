@@ -8,6 +8,7 @@ import { NewsFeedComponent } from './components/news-feed/news-feed.component';
 
 import { SharedModule } from 'src/app/shared/shared.module';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [NewsFeedComponent],
@@ -17,6 +18,7 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     HttpClientModule,
     SharedModule,
     InfiniteScrollModule,
+    NgxSpinnerModule,
   ],
   providers: [HttpRequestService],
 })

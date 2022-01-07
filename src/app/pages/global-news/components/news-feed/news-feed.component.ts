@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpRequestService } from 'src/app/shared/services/http-request.service';
 import { Inews } from 'src/app/pages/models/news.interface';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-news-feed',
@@ -8,7 +9,10 @@ import { Inews } from 'src/app/pages/models/news.interface';
   styleUrls: ['./news-feed.component.scss'],
 })
 export class NewsFeedComponent implements OnInit {
-  constructor(private service: HttpRequestService) {}
+  constructor(
+    private service: HttpRequestService,
+    private spinner: NgxSpinnerService
+  ) {}
 
   public title: string = 'English News';
 
