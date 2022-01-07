@@ -1,4 +1,8 @@
-# MULTIPLEAPIREQUESTS
+# Sport News infnite scroll fetch with loading spinner
+
+![](review.gif)
+
+ I've created a sports newspaper usign https://newsapi.org/ fetch. I've created an infinite scroll and implemented a spinner loading that apperars only when the data is being loaded. I've used an interceptro and created an specific service for the spiner.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.1.
 
