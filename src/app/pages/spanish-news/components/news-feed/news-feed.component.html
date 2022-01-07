@@ -10,4 +10,12 @@
 </div>
  -->
 
-<app-news [newsResults]="newsResults" [title]="title"></app-news>
+<app-spinner></app-spinner>
+<div
+  infinite-scroll
+  [infiniteScrollDistance]="2"
+  [infiniteScrollThrottle]="0"
+  (scrolled)="onScroll()"
+>
+  <app-news [newsResults]="newsResults" [title]="title"></app-news>
+</div>

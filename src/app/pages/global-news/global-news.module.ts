@@ -1,3 +1,4 @@
+import { SpinnerInterceptor } from './../../shared/interceptors/spinner.interceptor';
 import { HttpRequestService } from './../../shared/services/http-request.service';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
@@ -8,7 +9,8 @@ import { NewsFeedComponent } from './components/news-feed/news-feed.component';
 
 import { SharedModule } from 'src/app/shared/shared.module';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
-import { NgxSpinnerModule } from 'ngx-spinner';
+
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @NgModule({
   declarations: [NewsFeedComponent],
@@ -18,8 +20,10 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     HttpClientModule,
     SharedModule,
     InfiniteScrollModule,
-    NgxSpinnerModule,
   ],
-  providers: [HttpRequestService],
+  providers: [
+    HttpRequestService,
+    { provide: HTTP_INTERCEPTORS, useClass: SpinnerInterceptor, multi: true },
+  ],
 })
 export class GlobaNewsModule {}

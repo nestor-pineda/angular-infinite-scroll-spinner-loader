@@ -18,7 +18,7 @@ export class HttpRequestService {
 
   // Global News Endpoint
   spanishlNewsUrl =
-    'https://newsapi.org/v2/everything?q=futbol&language=es&apiKey=e24581c7b11b48aaa42a1cd064e5a204';
+    'https://newsapi.org/v2/everything?q=football&language=en&apiKey=e24581c7b11b48aaa42a1cd064e5a204';
 
   getSpanishNews(): Observable<any> {
     return this.http.get(this.spanishlNewsUrl);

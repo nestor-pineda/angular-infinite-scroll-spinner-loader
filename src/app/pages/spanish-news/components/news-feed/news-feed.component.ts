@@ -27,4 +27,10 @@ export class NewsFeedComponent implements OnInit {
       this.newsResults = result.articles;
     });
   }
+
+  onScroll(): void {
+    this.service.getSpanishNews().subscribe((result) => {
+      this.newsResults.push(...result.articles);
+    });
+  }
 }
